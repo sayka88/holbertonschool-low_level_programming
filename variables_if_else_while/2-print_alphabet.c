@@ -1,17 +1,19 @@
 #include <stdio.h>
-
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 1 (success)
+ */
 int main(void)
 {
-    char c = 'a';  // Start with the letter 'a'
+char c = 'a';
+while (c <= 'z')
+{
+putchar(c);
+c++;
+}
 
-    // Traverse the alphabet and print each letter
-    while (c <= 'z')
-    {
-        putchar(c);  // Print the current letter
-        c++;         // Move to the next letter in the alphabet
-    }
+putchar('\n');
 
-    putchar('\n');  // Print a new line after printing the alphabet
-
-    return 0;
+return (0);
 }

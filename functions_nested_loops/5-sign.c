@@ -1,10 +1,10 @@
 #include "main.h"
-
 /**
- * _isalpha - checks for alphabetic character
- * @c: the character to be checked
- *
- * Return: 1 if c is a letter, lowercase or uppercase, 0 otherwise
+ * print_sign - Check Holberton
+ * @n: An input number
+ * Description: Tohis function prints the sign of the number
+ * Return: 1 if number is positive, o if number is 0, or
+ * -1 if number is negative
  */
 int print_sign(int n)
 {

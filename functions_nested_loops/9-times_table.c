@@ -20,12 +20,12 @@ else
 _putchar(',');
 _putchar(' ');
 
-if (result <= 9)
+if (result < 10)
 _putchar(' ');
 }
 
-if (result <= 9)
-_putchar(result + '0');
+if (result < 10)
+_putchar('0' + result);
 else
 {
 _putchar((result / 10) + '0');

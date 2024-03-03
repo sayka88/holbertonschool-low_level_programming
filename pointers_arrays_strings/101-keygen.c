@@ -1,29 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/**
+ * main - Generates random valid passwords for the program 101-crackme.
+ *
+ * description: finds checksum value from objdump
+ *
+ * Return: 0
+ */
 int main(void)
 {
-char pass[13];
-int i;
+	srand(time(NULL));
 
-srand(time(NULL));
+	char password[13];
 
-for (i = 0; i < 12; i++) {
-	int j;
-
-	j = rand() % 128;
-
-	if ((j >= 48 && j <= 57) || (j >= 65 && j <= 90) || (j >= 97 && j <= 122)) {
-		pass[i] = j;
-	} else {
-		i--;
+	for (int i = 0; i < 12; i++)
+	{
+		password[i] = rand() % 94 + 32;
 	}
-}
 
-pass[12] = '\0';
+	password[12] = '\0';
 
-printf("%s\n", pass);
+	printf("Generated password: %s\n", password);
 
-return 0;
+	return (0);
 }

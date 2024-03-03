@@ -1,27 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - печатает первые 50 чисел Фибоначчи
+ * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
  *
- * Return: всегда 0
+ * Return: Always 0
  */
 int main(void)
 {
-	unsigned long int prev = 0, curr = 1, next;
-	int count = 0;
+	unsigned long int a = 0, b = 1, next;
+	int i;
 
-	while (count < 50)
+	printf("1, 1");
+	for (i = 2; i < 50; i++)
 	{
-		printf("%lu", curr);
-		if (count < 49)
-			printf(", ");
-		next = prev + curr;
-		prev = curr;
-		curr = next;
-		count++;
+		next = a + b;
+		printf(", %lu", next);
+		a = b;
+		b = next;
 	}
 	printf("\n");
-
 	return (0);
 }
-

@@ -19,7 +19,7 @@ for (i = 0; haystack[i]; i++)
 			break;
 
 	if (needle[j] == '\0')
-		return (haystack +i);
+		return (haystack + i);
 }
 return (NULL);
 }

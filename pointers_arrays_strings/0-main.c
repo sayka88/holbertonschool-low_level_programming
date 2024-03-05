@@ -5,7 +5,7 @@
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
- *
+ * _memset - fills memory with a constant byte
  * Return: Nothing.
  */
 void simple_print_buffer(char *buffer, unsigned int size)

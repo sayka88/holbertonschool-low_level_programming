@@ -1,15 +1,16 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog.
+ * new_dog - creates a new dog
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- * Return: pointer to the new dog, or NULL if function fails
+ *
+ * Return: pointer to the new dog structure, or NULL if it fails
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
@@ -33,6 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
+
 	new_dog->name = name_copy;
 	new_dog->age = age;
 	new_dog->owner = owner_copy;

@@ -1,23 +1,31 @@
-undefined8 main(int argc, char **argv)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - Generate a random password for 101-crackme file
+ *
+ * Return: 0 (Success)
+ */
+
+int main(void)
 {
-	undefined8 uVar1;
-	int64_t iVar2;
-	char **var_28h;
-	uint64_t var_1ch;
-	uint64_t var_10h;
-	
-	if (argc == 2) {
-		iVar2 = checksum((char **)argv[1]);
-		if (iVar2 == 0xad4) {
-			puts("\a\a\aTada! Congrats");
-			uVar1 = 0;
-		} else {
-			puts("Wrong password");
-			uVar1 = 1;
+	int password[64], i, sum = 0, n;
+
+	srand(time(NULL));
+	for (i = 0; i < 64; i++)
+	{
+		password[i] = rand() % 78;
+		sum+= password[i] + '0';
+		putchar(password[i] + '0');
+
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
 		}
-	} else {
-		printf("Usage: %s password\n", *argv);
-		uVar1 = 1;
 	}
-	return uVar1;
-}
+	return (0);
+}	

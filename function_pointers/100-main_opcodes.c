@@ -15,15 +15,15 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("Error\n");
+		fprintf(stderr, "Usage: %s <number_of_bytes>\n", argv[0]);
 		return (1);
 	}
 
 	num_bytes = atoi(argv[1]);
 
-	if (num_bytes < 0)
+	if (num_bytes <= 0)
 	{
-		printf("Error\n");
+		fprintf(stderr, "Error: Number of bytes must be a positive integer\n");
 		return (2);
 	}
 

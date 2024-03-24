@@ -5,7 +5,7 @@ main:
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, message
-	mov rdx, 17
+	mov rdx, 13
 	syscall
 
 	mov eax, 60
@@ -13,4 +13,4 @@ main:
 	syscall
 
 message:
-	db "Hello, World", 10
+	db "Hello, World", 13

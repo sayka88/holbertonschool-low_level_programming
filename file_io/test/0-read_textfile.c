@@ -3,7 +3,8 @@
 #include <fcntl.h>
 #include "main.h"
 
-ssize_t read_textfile(const char *filename, size_t letters) {
+ssize_t read_textfile(const char *filename, size_t letters)
+{
 	int fd, rd;
 	char *buf;
 
@@ -15,13 +16,15 @@ ssize_t read_textfile(const char *filename, size_t letters) {
 		return (0);
 
 	buf = malloc(sizeof(char) * letters);
-	if (!buf) {
+	if (!buf)
+	{
 		close(fd);
 		return (0);
 	}
 
 	rd = read(fd, buf, letters);
-	if (rd == -1) {
+	if (rd == -1)
+	{
 		free(buf);
 		close(fd);
 		return (0);
